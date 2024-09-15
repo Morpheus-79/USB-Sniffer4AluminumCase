@@ -12,7 +12,9 @@ There's also a great video:
 
 ... and a [blog post](https://www.downtowndougbrown.com/2023/08/building-alex-taradovs-open-source-usb-sniffer/) from Doug Brown giving some hints and tips for building and using this USB-Sniffer.
 
-## Some final words
+## Some final words and hints
+
+I had some problems installing the generic WinUSB driver with the supplied dummy [INF file](bin/blank_fx2lp.inf) under Windows 11. Windows recognized the driver as compatible but for whatever reason refused to install it. So i used [Zadig](https://zadig.akeo.ie/) to force the installation of its WinUSB driver while also renaming the unknown USB device to 'blank_fx2lp'. It worked like a treat... and after that i was able to flash the firmware and program the FPGA.
 
 Don't use EEPROMs from HGSEMI -> their cheaper prices are [not worth the hassle](https://github.com/ataradov/usb-sniffer/issues/45) ;) !
 
